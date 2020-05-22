@@ -1,4 +1,4 @@
-# Coinflip (Depreciated)
+# Coinflip (Deprecated)
 
  ## Theme
   a betting dapp on ethereum.
