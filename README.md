@@ -1,4 +1,4 @@
-# Coinflip
+# Coinflip (Depreciated)
 
  ## Theme
   a betting dapp on ethereum.
