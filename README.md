@@ -1,4 +1,4 @@
-# CoinflipDapp
+# Coinflip
 
  ## Theme
   a betting dapp on ethereum.
@@ -7,7 +7,7 @@
  ## Depreciated
   #### see the new repo : CoinflipDapp
 
-  #### Issues can't deploy version 3 (dapp with oracle) on ropsten
+  #### issues : can't deploy version 3 (dapp with oracle) on ropsten
 
  ## Built With
   * solidity 0.5.2
