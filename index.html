@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html> <!--style="height: 100%">-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Coinflip DApp</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- javascripts -->
+    <script type="text/javascript" src="./abi.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <!--  css />-->
+
+  </head>
+  <body style="min-height: 100%">
+    <div class="jumbotron jumbotron-fluid">
+
+      <div class="container row">
+        <div class="col-8">
+        <h1 class="display-2">Coinflip</h1>
+        </div>
+        <div class="col-4">
+          <p class="text-left"><i>Take the money!</i></p>
+          <p class="text-center"><i>or</i></p>
+          <p class="text-right"><i>Give the money!</i></p>
+        </div>
+      </div>
+   </div>
+   <div id="mainContainer" class="container-fluid" >
+
+     <div id="rowCont" class="row" style="min-height: 45vh" >
+
+       <div id="colUser" class="col-7" style="margin :auto">
+
+          <p class="shadow-sm p-3 mb-3 bg-white text-center">Hello <span id="name_output"></span></p>
+          <p class="lead text-center">Take your chance... flip the coin and win <mark><span id="reward_factor"></span> times</mark> your bet!</p>
+          <br><br>
+
+          <label for="bet_input">Bet from <span id="min_span"></span> to <span id="max_span"></span> ether :</label>
+          <input id="bet_input" type="number" step="0.01" placeholder="Put your bet here and ..."/>
+          <button id="bet_btn"><span id="bet_spin" class="spin"></span>flip the coin</button>
+          <br><br>
+          <span id="evt_output" class="font-italic font-weight-light"></span>
+          <br><br>
+          <div class="clearfix">
+            <span class="float-left">
+            <label>reward to claim : <span id="reward_output"></span></label>
+            <br>
+            <button id="claim_btn">Claim your reward</button>
+            <br><br><br>
+            </span>
+            <span class="float-right">
+            <!--<label for="name_input">Set your name :</label>
+            --><input id="name_input" type="text" placeholder="Give a new name"/>
+            <button id="name_btn">register</button>
+            <br>
+            </span>
+          </div>
+
+       </div>
+       <!--<div class="col-sm-3">
+         <img src="./sources/imgserver.png" class="img-responsive">
+       </div>-->
+       <div id="colOwner" class="col-3" style="margin :auto">
+
+         <p>Balance : <span id="balance_output"></span></p>
+         <button id= "owner_btn" data-toggle="collapse" data-target="#ownerCorner">Owner's corner</button>
+        <!-- <div class="toast mt-3">
+           <div id="access_msg" class="toast-header">
+
+           </div>
+           <div id="access_adr" class="toast-body">
+
+           </div>
+         </div>
+       </div>-->
+         <div id="ownerCorner" class="collapse">
+
+            <label for="deposit">Fund the contract :</label>
+            <div id="deposit" class="input-group">
+              <input id="deposit_input" type="text" class="form-control form-control-sm" placeholder="deposit in eth "/>
+              <button id="deposit_btn" class="btn btn-info btn-sm border-secondary">fund</button>
+            </div>
+
+            <label>update the settings :</label>
+            <div class="input-group">
+              <input id="min_input" type="number" class="form-control form-control-sm" step="0.001" placeholder="Minimum bet in eth"/>
+              <button id="min_btn" class="btn btn-info btn-sm border-secondary">update</button>
+            </div>
+            <div class="input-group">
+              <input id="max_input" type="number" class="form-control form-control-sm" step="0.001" placeholder="Maximum bet in eth"/>
+              <button id="max_btn" class="btn btn-info btn-sm border-secondary">update</button>
+            </div>
+            <div class="input-group">
+              <input id="mult_input" type="number" class="form-control form-control-sm" step="0.001" placeholder="Reward factor"/>
+              <button id="mult_btn" class="btn btn-info btn-sm border-secondary">update</button>
+            </div>
+
+            <label for="contract_input">upgrade the contract :</label>
+            <div class="btn-group">
+              <button id="pause_btn" class="btn btn-primary btn-sm border-secondary">pause</button>
+              <button id="unpause_btn" class="btn btn-primary btn-sm border-secondary">unpause</button>
+            </div>
+            <div class="input-group">
+              <input id="contract_input" type="text" class="form-control form-control-sm" placeholder="new contract address"/>
+              <button id="contract_btn" class="btn btn-warning btn-sm  border-secondary disabled">upgrade</button>
+            </div>
+            <div class="btn-group">
+              <button id="emergencyclaim_btn" class="btn btn-danger btn-sm  border-secondary">emergengy claim</button>
+              <button id="emergencywithdraw_btn" class="btn btn-danger btn-sm  border-secondary">emergency withdraw</button>
+            </div>
+
+
+
+         </div>
+       </div>
+  </div>
+  </div>
+  </body>
+  </html>
