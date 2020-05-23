@@ -16,7 +16,7 @@
   * Web3.js v1.2.1
 
  ## Author
-  * **ibourn** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+  * **ibourn** - *Initial work*
 
  ## License
   none
